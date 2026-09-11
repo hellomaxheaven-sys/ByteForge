@@ -1,0 +1,28 @@
+# ByteForge4
+
+A 4bit CPU built from scratch in Logisim
+
+
+# Status
+|Module|Status|Docs|
+-------------------------
+|REG4v2-> 4bit loadable register|Done|docs/REG4v2.md|
+|REG8-> 8bit loadable register|planned|-|
+|Register File|planned||
+|ALU|planned||
+|Program Counter|planned||
+|Instruction register|planned||
+|Control Unit|planned||
+|Memory|planned||
+
+# REG4v2
+A 4-bit register with a {write-enable} (`LOAD`) input.It stores 4 bits and 
+either:
+- **Loads** the value on `D` when `LOAD = 1` 
+- **Holds** its current value when `LOAD = 0`
+
+Built from:
+- 4× D flip-flops (storage)
+- 4× 2:1 multiplexers (load/hold selection)
+- 2× splitters (bus fan-out and merge)
+
